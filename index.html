@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Manuela Oprita’s portfolio of healthcare analytics, data quality and data governance projects.">
+<meta name="theme-color" content="#f7f5ff">
+<title>Manuela Oprita | Data Governance &amp; Analytics</title>
+<link rel="stylesheet" href="style.css">
+<script src="portfolio.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="shell nav"><a class="brand" href="#main"><span class="mark" aria-hidden="true">MO</span> Manuela Oprita</a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#governance">Governance</a><a href="#about">About</a><a href="cv.html">CV</a></nav></div></header>
+<main id="main">
+<section class="hero" aria-labelledby="intro"><div class="shell hero-layout">
+<div class="hero-copy">
+<p class="eyebrow"><span></span> MANUELA OPRITA · PORTFOLIO</p>
+<h1 id="intro">Better data for<br><em>better decisions.</em></h1>
+<p class="lede">I’m Manuela Oprita, a dental nurse and data analytics graduate. Explore my projects in healthcare analytics, data quality and governance.</p>
+<div class="hero-actions"><a class="button primary" href="#projects">Explore my projects</a><a class="button secondary" href="#about">About me</a></div>
+</div>
+<div class="preview" aria-labelledby="preview-title">
+<div class="preview-heading"><div><span class="overline">DENTAL APPOINTMENTS</span><h2 id="preview-title">Clinic activity at a glance</h2></div><span class="pill">Synthetic data</span></div>
+<div class="preview-metrics"><div><span>Booked slots</span><strong id="hero-count">—</strong></div><div><span>Missed-visit rate</span><strong id="hero-dna">—</strong></div><div><span>Period</span><strong>6 months</strong></div></div>
+<div id="hero-chart" class="chart dark-chart" role="img" aria-label="Monthly appointment volume and missed appointments"></div>
+<div class="legend"><span><i class="legend-total"></i>Booked slots</span><span><i class="legend-dna"></i>Did not attend</span><span class="period">JAN–JUN 2025</span></div>
+</div>
+</div></section>
+
+<section id="projects" class="section shell">
+<p class="section-label">SELECTED PROJECTS</p><h2>Explore the clinic data</h2>
+<p class="section-intro">A fictional dental clinic links the three projects. Explore appointment activity, check the reliability of the source records, and see who would own those checks in practice.</p>
+<div class="project-links">
+<a href="#appointments"><span class="project-type">Interactive dashboard</span><strong>Dental Appointments</strong><span>Where are appointment slots being lost?</span></a>
+<a href="#quality"><span class="project-type">Interactive dashboard</span><strong>Healthcare Data Quality</strong><span>Which records need attention before reporting?</span></a>
+<a href="#governance"><span class="project-type">Case study</span><strong>Data Governance</strong><span>Who owns the data and how is access granted?</span></a>
+</div>
+</section>
+
+<section id="appointments" class="section band"><div class="shell">
+<p class="section-label">REPORTING DASHBOARD</p><h2>Dental Appointments</h2><p class="section-intro">Explore demand, cancellations and missed visits across three fictional clinics. Use the filters to compare periods and locations.</p>
+<div class="panel dashboard">
+<div class="controls"><div class="field"><label for="clinic-filter">Clinic</label><select id="clinic-filter"><option value="">All clinics</option><option value="North">North</option><option value="Central">Central</option><option value="West">West</option></select></div>
+<div class="field"><label for="period-filter">Period</label><select id="period-filter"><option value="">January–June 2025</option><option value="1">January–March 2025</option><option value="2">April–June 2025</option></select></div></div>
+<div id="appointment-metrics" class="metrics" aria-live="polite"></div>
+<div class="report-grid"><div><h3>Monthly appointment volume</h3><div id="appointment-chart" class="chart light-chart" role="img" aria-label="Monthly booked slots and missed appointments"></div><div class="legend"><span><i class="legend-total"></i>Booked slots</span><span><i class="legend-dna"></i>Did not attend</span></div></div>
+<div class="readout"><h3>What the data shows</h3><p id="appointment-insight" aria-live="polite"></p><p class="definition">Missed-visit rate uses attended plus missed appointments as the denominator. Cancelled slots are reported separately.</p></div></div>
+<details><summary>View chart data</summary><div id="appointment-table" class="table-wrap"></div></details>
+</div></div></section>
+
+<section id="quality" class="section shell">
+<p class="section-label">DATA QUALITY DASHBOARD</p><h2>Healthcare Data Quality</h2><p class="section-intro">Compare the raw appointment export with the reporting dataset. The checks cover missing required fields, repeated appointment IDs and unsupported statuses.</p>
+<div class="panel dashboard">
+<div class="controls"><div class="field"><label for="quality-stage">Dataset stage</label><select id="quality-stage"><option value="raw">Raw export</option><option value="clean">Reporting dataset</option></select></div>
+<div class="field"><label for="quality-clinic">Clinic</label><select id="quality-clinic"><option value="">All clinics</option><option value="North">North</option><option value="Central">Central</option><option value="West">West</option></select></div></div>
+<button type="button" class="button outline download" id="download-data">Download full dataset (CSV)</button>
+<div id="quality-metrics" class="metrics" aria-live="polite"></div>
+<div class="report-grid"><div><h3>Records flagged by rule</h3><div id="quality-rules" class="rule-chart"></div></div><div class="readout"><h3>From export to reporting</h3><p id="quality-insight" aria-live="polite"></p><p class="definition">A row can fail more than one check. The overall total counts each flagged row once.</p></div></div>
+</div>
+</section>
+
+<section id="governance" class="section governance"><div class="shell">
+<p class="section-label">GOVERNANCE CASE STUDY</p><h2>From clinic records to trusted reporting.</h2>
+<p class="section-intro">A proposed operating model for the same fictional clinic network. The goal is to make the appointment report traceable and give someone clear responsibility when a check fails.</p>
+<div class="governance-grid">
+<div class="panel gov-card"><h3>Ownership and access</h3><dl><dt>Data owner · Clinic operations manager</dt><dd>Approves definitions, access and publication of the report.</dd><dt>Data steward · Scheduling lead</dt><dd>Reviews exceptions and coordinates corrections with the booking team.</dd><dt>Reporting analyst</dt><dd>Runs quality checks and uses only the fields the report needs.</dd></dl></div>
+<div class="panel gov-card"><h3>Issue handling</h3><ol><li>Flag the affected rows and record which rule failed.</li><li>Assign the issue to the scheduling lead to verify against the booking system.</li><li>Correct the source, rerun the checks and record the resolution. Keep unresolved rows out of reporting.</li></ol></div>
+</div>
+<div class="panel gov-card catalog"><h3>Mini data catalogue</h3><div class="table-wrap"><table><thead><tr><th scope="col">Field</th><th scope="col">Definition</th><th scope="col">Quality rule</th></tr></thead><tbody>
+<tr><th scope="row">Appointment ID</th><td>Identifier for a scheduled slot</td><td>Required and unique in the reporting data</td></tr>
+<tr><th scope="row">Appointment date</th><td>Day the visit was scheduled to take place</td><td>Required and formatted as YYYY-MM-DD</td></tr>
+<tr><th scope="row">Clinic</th><td>Site where the slot was scheduled</td><td>Must match a clinic in the reporting scope</td></tr>
+<tr><th scope="row">Status</th><td>Recorded outcome of the slot</td><td>Attended, Did not attend, or Cancelled</td></tr>
+</tbody></table></div>
+<p class="definition"><strong>Data lineage</strong> · Booking export → quality checks and exceptions → reporting dataset → aggregate dashboard.</p></div>
+</div></section>
+
+<section id="about" class="section shell about"><div><p class="section-label">ABOUT</p><h2>Manuela Oprita</h2></div><div><p>I have a QQI Level 8 Higher Diploma in Data Analytics from Dublin Business School and experience maintaining clinical records and using Excel in dental services. I’m interested in opportunities in data governance, data quality and reporting.</p><a class="button outline" href="https://www.linkedin.com/in/manuelajoita/">Connect on LinkedIn</a></div></section>
+</main>
+<footer><div class="shell footer"><span>Manuela Oprita · Data Governance &amp; Analytics</span><span>All project data is synthetic.</span></div></footer>
+<noscript><div class="shell">Enable JavaScript to use the dashboard filters.</div></noscript>
+</body>
+</html>
