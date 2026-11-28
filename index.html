@@ -8,7 +8,7 @@
 <title>Ella Oprita | Data Governance &amp; Analytics</title>
 <link rel="stylesheet" href="style.css">
 <script src="portfolio.js" defer></script>
-</head>
+<style>.clinic-feature{margin-top:1.4rem;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;background:#f4f2fb;border:1px solid #dedbea;border-radius:1.4rem;padding:clamp(1.4rem,4vw,3rem)}.clinic-feature h3{font-size:clamp(1.8rem,3vw,2.5rem);margin:.3rem 0}.clinic-feature img{display:block;width:100%;border:1px solid #d7dedb;border-radius:.8rem}.clinic-feature ul{display:flex;flex-wrap:wrap;list-style:none;gap:.45rem;padding:0;margin:1rem 0 1.4rem}.clinic-feature li{background:white;color:#335052;border:1px solid #cdcfd8;border-radius:1rem;padding:.15rem .7rem;font-size:.85rem}@media(max-width:700px){.clinic-feature{grid-template-columns:1fr}}</style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="shell nav"><a class="brand" href="#main"><span class="mark" aria-hidden="true">EO</span> Ella Oprita</a><nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#governance">Governance</a><a href="#about">About</a><a href="cv.html">CV</a></nav></div></header>
@@ -28,16 +28,8 @@
 </div>
 </div></section>
 
-<section id="projects" class="section shell">
-<p class="section-label">SELECTED PROJECTS</p><h2>Explore the clinic data</h2>
-<p class="section-intro">A fictional dental clinic links the three projects. Explore appointment activity, check the reliability of the source records, and see who would own those checks in practice.</p>
-<div class="project-links">
-<a href="clinic-dashboard.html"><span class="project-type">SQL case study</span><strong>Clinic reporting lab</strong><span>Explore two dashboards, inspect 82 flagged records and download the SQLite database.</span></a>
-<a href="#appointments"><span class="project-type">Interactive dashboard</span><strong>Dental Appointments</strong><span>Where are appointment slots being lost?</span></a>
-<a href="#quality"><span class="project-type">Interactive dashboard</span><strong>Healthcare Data Quality</strong><span>Which records need attention before reporting?</span></a>
-<a href="#governance"><span class="project-type">Case study</span><strong>Data Governance</strong><span>Who owns the data and how is access granted?</span></a>
-</div>
-</section>
+<section id="projects" class="section shell"><h2>Projects</h2>
+<article class="clinic-feature"><div><p class="section-label">HEALTHCARE CASE STUDY</p><h3>Clinic Reporting Lab</h3><p>Follow 1,862 fictional appointment records from the booking export through quality checks to the final attendance report.</p><ul aria-label="Project skills"><li>SQL</li><li>Data Quality</li><li>Reporting</li><li>Data Governance</li></ul><a class="button primary" href="clinic-dashboard.html">View project</a></div><img loading="lazy" src="clinic-quality.png" alt="Data quality dashboard showing 82 flagged records and 1,780 reportable bookings"></article></section>
 
 <section id="appointments" class="section band"><div class="shell">
 <p class="section-label">REPORTING DASHBOARD</p><h2>Dental Appointments</h2><p class="section-intro">Explore demand, cancellations and missed visits across three fictional clinics. Use the filters to compare periods and locations.</p>
