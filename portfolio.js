@@ -177,10 +177,13 @@ function downloadData() {
   setTimeout(() => URL.revokeObjectURL(destination), 1000);
 }
 
+if (byId("hero-count")) {
 const all = summarize(cleanRecords);
 byId("hero-count").textContent = number.format(all.booked);
 byId("hero-dna").textContent = percent.format(all.rate);
 renderChart("hero-chart", monthlySummary(cleanRecords));
+}
+if (byId("clinic-filter")) {
 byId("clinic-filter").addEventListener("change", updateAppointments);
 byId("period-filter").addEventListener("change", updateAppointments);
 byId("quality-stage").addEventListener("change", updateQuality);
@@ -188,3 +191,4 @@ byId("quality-clinic").addEventListener("change", updateQuality);
 byId("download-data").addEventListener("click", downloadData);
 updateAppointments();
 updateQuality();
+}
